@@ -1,99 +1,62 @@
-# 🚀 Azure Databricks Sales Data Pipeline
+# 🚀 Azure Databricks Sales Pipeline
 
-## 📌 Overview
-This project demonstrates an end-to-end data pipeline built using Azure Databricks and PySpark to process and analyze sales data.
+## 🌟 Overview
 
-The pipeline ingests raw data, transforms it into meaningful insights, and stores the results for downstream analytics and visualization.
+Designed and implemented a scalable cloud-native sales data pipeline using Microsoft Azure and Databricks to automate ingestion, transformation, and reporting of enterprise sales data.
 
----
+## 💼 Business Problem
 
-## ⚙️ Architecture
+Organizations often rely on fragmented spreadsheets, manual reporting, and delayed analytics. This limits visibility into sales performance and slows executive decision-making.
 
-CSV (Unity Catalog Volume)
-↓
-Azure Databricks (Apache Spark)
-↓
-Data Transformation (PySpark)
-↓
-Aggregated Output (Revenue by Region)
-↓
-Stored Data (Volume + Table)
-↓
-Visualization (Databricks / Power BI)
+## 🛠️ Solution
 
+Built an end-to-end analytics pipeline that centralizes raw sales data, transforms it into business-ready datasets, and supports leadership dashboards with faster insights.
 
----
+## 🧭 Architecture
 
-## 🔄 Pipeline Workflow
+Source Data → Azure Data Factory → Azure Data Lake → Azure Databricks → Curated Tables → Power BI Dashboard
 
-### 1. Data Ingestion
-- Loaded CSV data from Unity Catalog Volume  
-- Used Spark DataFrame API for scalable processing  
+## ⚙️ Core Capabilities
 
-### 2. Data Transformation
-- Grouped data by region  
-- Aggregated total revenue  
-
-### 3. Data Storage
-- Saved processed data back to Volume  
-- Stored results as a queryable table (`sales_summary`)  
-
-### 4. Data Validation
-- Reloaded saved data  
-- Verified row counts and outputs  
-
-### 5. Visualization
-- Created bar chart showing revenue by region  
-
----
-
-## 📊 Results
-
-| Region | Total Revenue |
-|--------|-------------|
-| East   | 2500        |
-| West   | 2000        |
-| South  | 1200        |
-
----
-
-## 📸 Project Screenshots
-
-### 📊 Dashboard
-![Dashboard](images/Dashboard.png)
-
-### 📈 Processed Output
-![Output](images/Chart1.png)
-
-### 💻 Pipeline Code
-![Code](images/Datapipline_databricks.png)
-
----
+- ✅ Automated ingestion of raw sales data  
+- ✅ ETL transformations using PySpark  
+- ✅ Bronze / Silver / Gold medallion architecture  
+- ✅ Scalable storage with Azure Data Lake  
+- ✅ KPI-ready data models for reporting  
+- ✅ Dashboard integration for executive insights  
 
 ## 🧰 Technologies Used
-- Azure Databricks  
-- Apache Spark (PySpark)  
-- Unity Catalog (Volumes)  
-- Power BI (for visualization)
 
----
+- ☁️ Azure Data Factory  
+- ⚡ Azure Databricks  
+- 🗄️ Azure Data Lake Storage Gen2  
+- 🐍 Python / PySpark  
+- 🧮 SQL  
+- 📊 Power BI  
+- 🐙 GitHub  
 
-## 💡 Key Learnings
-- Built a scalable data pipeline using distributed processing  
-- Implemented data validation for pipeline reliability  
-- Transformed raw data into business insights  
-- Structured data for downstream analytics and BI tools  
+## 📈 Business Impact
 
----
+- ⏱️ Reduced manual reporting effort  
+- 📡 Improved data freshness and trust  
+- ⚡ Faster sales performance insights  
+- 📈 Scalable architecture for future growth  
 
-## 💼 Resume Highlight
-Built an end-to-end data pipeline in Azure Databricks using PySpark to ingest, transform, and aggregate sales data, producing regional revenue insights and persisting results in Unity Catalog.
+## 🎯 Sample KPIs
 
----
+- 💰 Revenue by Region  
+- 📅 Monthly Sales Growth  
+- 🛍️ Product Performance  
+- 👥 Rep Productivity  
+- 🔮 Forecast vs Actuals  
 
-## 🚀 Future Improvements
-- Integrate with Azure AI Search for intelligent querying  
-- Build a Power BI dashboard for real-time reporting  
-- Expand pipeline to handle larger datasets  
+## 🔮 Future Enhancements
 
----
+- ⚡ Real-time streaming ingestion  
+- 🤖 AI forecasting models  
+- 🚨 Automated anomaly detection  
+- 📬 Executive alerting workflows  
+
+## 👩🏽‍💻 Author
+
+Built by Kierra Jenkins as part of an Azure + AI Business Engineering portfolio.
