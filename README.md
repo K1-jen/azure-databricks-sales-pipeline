@@ -1,61 +1,101 @@
 # 🚀 Azure Databricks Sales Pipeline
 
-## 🌟 Overview
+## 📌 Overview
+This project demonstrates an end-to-end data pipeline built using Azure Databricks and PySpark to process and analyze sales data.
 
-Designed and implemented a scalable cloud-native sales data pipeline using Microsoft Azure and Databricks to automate ingestion, transformation, and reporting of enterprise sales data.
+The pipeline ingests raw data, transforms it into meaningful insights, and stores the results for downstream analytics and visualization.
 
-## 💼 Business Problem
+---
+## Business Problem
 
-Organizations often rely on fragmented spreadsheets, manual reporting, and delayed analytics. This limits visibility into sales performance and slows executive decision-making.
+Organizations often rely on fragmented spreadsheets and delayed reporting, limiting visibility into sales performance and slowing executive decision-making.
 
-## 🛠️ Solution
+## Solution
 
-Built an end-to-end analytics pipeline that centralizes raw sales data, transforms it into business-ready datasets, and supports leadership dashboards with faster insights.
+Built an end-to-end analytics pipeline that centralizes raw sales data, transforms it into business-ready datasets, and supports dashboard reporting for leadership teams.
 
-## 🧭 Architecture
+## Architecture
 
 Source Data → Azure Data Factory → Azure Data Lake → Azure Databricks → Curated Tables → Power BI Dashboard
 
-## ⚙️ Core Capabilities
 
-- ✅ Automated ingestion of raw sales data  
-- ✅ ETL transformations using PySpark  
-- ✅ Bronze / Silver / Gold medallion architecture  
-- ✅ Scalable storage with Azure Data Lake  
-- ✅ KPI-ready data models for reporting  
-- ✅ Dashboard integration for executive insights  
+---
+
+## 🔄 Pipeline Workflow
+
+### 1. Data Ingestion
+- Loaded CSV data from Unity Catalog Volume  
+- Used Spark DataFrame API for scalable processing  
+
+### 2. Data Transformation
+- Grouped data by region  
+- Aggregated total revenue  
+
+### 3. Data Storage
+- Saved processed data back to Volume  
+- Stored results as a queryable table (`sales_summary`)  
+
+### 4. Data Validation
+- Reloaded saved data  
+- Verified row counts and outputs  
+
+### 5. Visualization
+- Created bar chart showing revenue by region  
+
+---
+
+## 📊 Results
+
+| Region | Total Revenue |
+|--------|-------------|
+| East   | 2500        |
+| West   | 2000        |
+| South  | 1200        |
+
+---
+
+## 📸 Project Screenshots
+
+### 📊 Dashboard
+![Dashboard](images/Dashboard.png)
+
+### 📈 Processed Output
+![Output](images/Chart1.png)
+
+### 💻 Pipeline Code
+![Code](images/Datapipline_databricks.png)
+
+---
 
 ## 🧰 Technologies Used
+- Azure Databricks  
+- Apache Spark (PySpark)  
+- Unity Catalog (Volumes)  
+- Power BI (for visualization)
 
-- ☁️ Azure Data Factory  
-- ⚡ Azure Databricks  
-- 🗄️ Azure Data Lake Storage Gen2  
-- 🐍 Python / PySpark  
-- 🧮 SQL  
-- 📊 Power BI  
-- 🐙 GitHub  
+---
 
-## 📈 Business Impact
+## Business Impact
 
-- ⏱️ Reduced manual reporting effort  
-- 📡 Improved data freshness and trust  
-- ⚡ Faster sales performance insights  
-- 📈 Scalable architecture for future growth  
+- Reduced manual reporting effort
+- Improved data freshness and trust
+- Faster sales performance insights
+- Scalable architecture for future growth
 
-## 🎯 Sample KPIs
+## Sample KPIs
 
-- 💰 Revenue by Region  
-- 📅 Monthly Sales Growth  
-- 🛍️ Product Performance  
-- 👥 Rep Productivity  
-- 🔮 Forecast vs Actuals  
+- Revenue by Region
+- Monthly Sales Growth
+- Product Performance
+- Rep Productivity
+- Forecast vs Actuals
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
-- ⚡ Real-time streaming ingestion  
-- 🤖 AI forecasting models  
-- 🚨 Automated anomaly detection  
-- 📬 Executive alerting workflows  
+- Real-time streaming ingestion
+- AI forecasting models
+- Automated anomaly detection
+- Executive alerting workflows
 
 ## 👩🏽‍💻 Author
 
